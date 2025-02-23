@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    overflow: hidden;
+}
+*{
+    font-family: monospace;
+    font-size: 14px;
+}
+.gradient{
+    background-image: linear-gradient(to right, #71acff, #54e5ff, #9602e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card{
+    background: #1E1E1E;
+}
+.load{
+    background-image: linear-gradient(to right, #71acff, #54e5ff, #9602e0);
+    
+}
