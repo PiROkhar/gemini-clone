@@ -8,21 +8,21 @@ const Main = () => {
 
 
   return (
-    <div className='bg-[#121212] w-full h-screen flex justify-between flex-col items-center'>
+    <div className='bg-[#121212] w-screen h-screen flex justify-between flex-col items-center'>
 {/* NAV */}
       <div className='flex justify-between items-center w-[100%] p-4'>
-        <p className='font-bold text-xl opacity-50 text-[#ffffff]'>Gemini</p>
+        <p className='font-bold text-xl text-[#ffffff] pl-16 sm:pl-0'>Gemini</p>
         <img src={assets.user_icon} className='size-10 rounded-full '/>
       </div>
 {/* Heading */}
           {!showResult ? <div className='flex flex-col gap-6'><div>
-                <p className=' text-6xl gradient '>Hello,Dev.</p>
-                <p className=' text-6xl text-[#E0E0E0]'>How can I help you ?</p>
+                <p className=' text-xl sm:text-6xl gradient '>Hello,Dev.</p>
+                <p className=' text-xl sm:text-6xl text-[#E0E0E0]'>How can I help you ?</p>
               </div>
-              <div className='flex gap-6'>
+              <div className='hidden sm:grid sm:grid-cols-2 gap-6 '>
                 {
                   prompt.map((cmd,index)=>(
-                    <div key={index} className='card p-4 h-[170px] w-[170px] rounded-lg text-[#A0A0A0] font-medium justify-between flex flex-col cursor-pointer'>
+                    <div key={index} className='card p-2 lg:p-4 h-auto w-80 rounded-lg text-[#A0A0A0] font-medium justify-between flex flex-col cursor-pointer text-sm lg:text-lg '>
                       {cmd}
                       <img src={assets.bulb_icon} className='flex justify-end size-6'/>
                     </div>
@@ -42,7 +42,7 @@ const Main = () => {
                         <hr className='load h-4 rounded-md opacity-25'/>
                         <hr className='load h-4 rounded-md opacity-25'/>
                       </div>
-                      :<div><p dangerouslySetInnerHTML={{__html:resultData}} className='pl-4 overflow-y-auto text-[#E0E0E0] '></p></div>
+                      :<div><p dangerouslySetInnerHTML={{__html:resultData}} className='pl-4 overflow-y-auto text-[#E0E0E0] text-2xl sm:text-base '></p></div>
 
                     }
                     
